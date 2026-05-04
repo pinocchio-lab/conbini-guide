@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Japan Convenience Store Food Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+      text-align: center;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    button {
+      margin: 10px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #007BFF;
+      color: white;
+    }
+    #result {
+      margin-top: 20px;
+      padding: 15px;
+      background: white;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🍱 Japan Convenience Store Food Guide</h1>
+<p>Choose your goal:</p>
+
+<button onclick="showResult('healthy')">Healthy</button>
+<button onclick="showResult('cheap')">Cheap</button>
+<button onclick="showResult('protein')">High Protein</button>
+
+<div id="result"></div>
+
+<script>
+function showResult(type) {
+  let content = "";
+
+  if (type === "healthy") {
+    content = `
+      <h2>Healthy Option</h2>
+      <p>🥗 Salad + 🐔 Grilled Chicken + 🍙 Rice Ball</p>
+      <p>Low fat, balanced nutrition, easy to find at any store.</p>
+    `;
+  }
+
+  if (type === "cheap") {
+    content = `
+      <h2>Budget Option (~500-600 yen)</h2>
+      <p>🍙 2 Rice Balls + 🍜 Cup Soup</p>
+      <p>Filling and affordable. Available everywhere.</p>
+    `;
+  }
+
+  if (type === "protein") {
+    content = `
+      <h2>High Protein Option</h2>
+      <p>🐔 Salad Chicken + 🥚 Boiled Eggs + 🥛 Protein Drink</p>
+      <p>Great for muscle recovery and energy.</p>
+    `;
+  }
+
+  document.getElementById("result").innerHTML = content;
+}
+</script>
+
+</body>
+</html>
