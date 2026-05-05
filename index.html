@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Japan Convenience Store Food Guide</title>
+  <title>Japan Convenience Store Food Guide</</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -48,30 +48,32 @@ function showResult(type) {
   let content = "";
 
   if (type === "healthy") {
-    content = `
-      <h2>Healthy Option</h2>
-      <p>🥗 Salad + 🐔 Grilled Chicken + 🍙 Rice Ball</p>
-      <p>Low fat, balanced nutrition, easy to find at any store.</p>
-    `;
+  content = `
+    <h2>Healthy Option</h2>
+    <p>🥗 Salad + 🐔 Salad Chicken (near drinks section) + 🍙 Rice Ball (Onigiri)</p>
+    <p><b>Why this works:</b> Low fat, balanced, easy to find.</p>
+    <p>Available at 7-Eleven, FamilyMart, Lawson</p>
+  `;
   }
-
   if (type === "cheap") {
-    content = `
-      <h2>Budget Option (~500-600 yen)</h2>
-      <p>🍙 2 Rice Balls + 🍜 Cup Soup</p>
-      <p>Filling and affordable. Available everywhere.</p>
-    `;
+  content = `
+    <h2>Budget Option (~500-600 yen)</h2>
+    <p>🍙 2 Rice Balls (Onigiri) + 🍜 Cup Soup</p>
+    <p><b>Why this works:</b> Cheap, filling, available everywhere.</p>
+    <p>Available at 7-Eleven, FamilyMart, Lawson</p>
+  `;
   }
 
   if (type === "protein") {
-    content = `
-      <h2>High Protein Option</h2>
-      <p>🐔 Salad Chicken + 🥚 Boiled Eggs + 🥛 Protein Drink</p>
-      <p>Great for muscle recovery and energy.</p>
-    `;
+  content = `
+    <h2>High Protein Option</h2>
+    <p>🐔 Salad Chicken + 🥚 Boiled Eggs + 🥛 Protein Drink</p>
+    <p><b>Why this works:</b> High protein, quick energy, easy to find.</p>
+    <p>Available at 7-Eleven, FamilyMart, Lawson</p>
+  `;
   }
-
   document.getElementById("result").innerHTML = content;
+  window.scrollTo(0, document.body.scrollHeight);
 }
 </script>
 
